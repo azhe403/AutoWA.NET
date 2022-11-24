@@ -1,1 +1,1 @@
-# AutoWA.NET - WhatsApp Automation with Playwright
+# AutoWA.NET - WhatsApp Automation using Playwright
