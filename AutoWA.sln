@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoWA.AppHost", "AutoWA.AppHost\AutoWA.AppHost.csproj", "{D4DE10A4-5659-4127-A2D8-7B48B2C7A676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4DE10A4-5659-4127-A2D8-7B48B2C7A676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4DE10A4-5659-4127-A2D8-7B48B2C7A676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4DE10A4-5659-4127-A2D8-7B48B2C7A676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4DE10A4-5659-4127-A2D8-7B48B2C7A676}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
