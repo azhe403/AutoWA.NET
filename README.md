@@ -1,0 +1,1 @@
+# AutoWA.NET - WhatsApp Automation with Playwright
