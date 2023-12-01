@@ -1,7 +1,3 @@
-using System.Reflection;
-using MediatR;
-using MongoFramework;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,14 +7,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<SendMessageTextHandler>());
 
 builder.Services.AddScoped<UserDbContext>(
-	provider => {
-		var connectionString = builder.Configuration.GetConnectionString("MongoDb");
-		var userDbContext = new UserDbContext(MongoDbConnection.FromConnectionString(connectionString));
-		return userDbContext;
-	}
+    provider => {
+        var connectionString = builder.Configuration.GetConnectionString("MongoDb");
+        var userDbContext = new UserDbContext(MongoDbConnection.FromConnectionString(connectionString));
+        return userDbContext;
+    }
 );
 
 builder.Services.AddScoped<WhatsAppService>();
@@ -28,8 +24,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
